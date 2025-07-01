@@ -1,4 +1,4 @@
-# Kitaev-Toric-Code
+# Kitaev's toric code
 A qiskit implementation of Kitaev's toric code
 
 
