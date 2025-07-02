@@ -127,5 +127,5 @@ This property is the essence of how one can detect "bit flips errors" on the log
 If we have bit flips along a path like so:
 
 <p align="center">
-<img src="lattice_logical_x2" alt="bitflip_path" width="250"/>
+<img src="lattice_logical_x2.png" alt="bitflip_path" width="250"/>
 </p>
