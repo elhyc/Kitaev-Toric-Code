@@ -126,7 +126,7 @@ By the nature of how the plaquettes are arranged on the lattice, it is easy to s
 This property is the essence of how one can detect "bit flips errors" on the logical $0$ state $|0 \rangle_{L}$. For example, if a *single* bit flip error occured after preparing the logical $0$ state, then it will be detected by the presence of exactly two $-1$-eigenvalue measurements associated to neighbouring plaquette operators. More generally, isolated bit flip errors can be detected if there are groups of neighbouring $-1$-eigenvalue measurements associated to pairs of neighbouring plaquette operators.
 
 
-Now suppose that we had a path of  bit flip errors, traversing through adjacent plaquettes. Then, it is easy to see that each plaquette on the path will have an even number of $-1$ eigenvector qubits around their respective boundaries, except for possibly the starting plaquette of the path and the ending plaquette of the path. In other words, $-1$ eigenvalue measurements among plaquette operators can be "pushed out" along a path of bit flips, and the total number of plaquettes operators with $-1$-eigenvalue measurements will always be an even number.  
+Now suppose that we had a path of  bit flip errors, traversing through adjacent plaquettes. Then, it is easy to see that each plaquette on the path will have an even number bit flipped qubits around their respective boundaries, except for possibly the starting plaquette of the path and the ending plaquette of the path. In other words, $-1$ eigenvalue measurements among plaquette operators can be "pushed out" along a path of bit flips, and the total number of plaquettes operators with $-1$-eigenvalue measurements will always be an even number.  
 
 However, note that if these bit flip paths form a complete loop (which may happen if a bit flip path reaches the periodic boundary of the lattice), then every plaquette in the path will have an even number of $-1$ eigenvector qubits around their boundaries. As a result, none of the plaquette operators will measure any $-1$ eigenvalues and so finding $-1$ eigenvalue measurements among plaquette operators will no longer be sufficient for "detecting bit flip errors".   
 
@@ -151,3 +151,14 @@ In light of the above discussion, syndrome measurements and decoding procedures 
 
 In princple, we would like to have an ancilla qubit for each star and for each plaquette appearing in the lattice. These ancilla qubits are initialized to the physical zero state $| 0 \rangle$, and flip to $| 1 \rangle$ if and only if the data qubits associated to the corresponding plaquette or star are in a $-1$ eigenstate for the respective plaquette or star operator. 
 
+To do this, we can use a "Hadamard test" for each star or plaquette, which is a special case of the quantum phase estimation procedure. 
+
+
+
+
+The result of measuring these ancilla qubits is that we deterministically get a $1$ if the $4$ surrounding data qubits are in a $-1$ eigenstate and we get a $0$ if the data qubits are in a $+1$ eigenstate. By performing these ancilla measurements for each star or plaquette, the syndrome qubits signal to us which star or plaquette contains an odd number of $X$ or $Z$ flipped data qubits. Note that this does not precisely pinpoint to us which qubits have been flipped, but instead it is a "hint" of what might be possible. 
+
+
+<p align="center">
+<img src="pathsXflip.png" alt="twopossiblepaths" width="250"/>
+</p>
