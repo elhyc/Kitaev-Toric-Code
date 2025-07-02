@@ -142,6 +142,12 @@ Note that the above has been focusing on bit flip errors. Phase flip errors ($Z$
 
 In light of the above discussion, syndrome measurements and decoding procedures is of course based on keeping track of the plaquettes and stars that result in a $-1$ eigenvalue measurement when measuring the data qubits. 
 
+<p align="center">
+<img src="figure1.jpg" alt="starsandplaqs" width="250"/>
+</p>
+
+
 ### Syndrome ancilla qubits
+
 In princple, we would like to have an ancilla qubit for each star and for each plaquette appearing in the lattice. These ancilla qubits are initialized to the physical zero state $| 0 \rangle$, and flip to $| 1 \rangle$ if and only if the data qubits associated to the corresponding plaquette or star are in a $-1$ eigenstate for the respective plaquette or star operator. 
 
