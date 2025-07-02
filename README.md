@@ -87,9 +87,8 @@ For example, if we label the qubits on the star depicted below in a counterclock
 
 then the GHZ state for this star is given by 
 
-
+<p align="center">
 $$
-\begin{center}
 q_0 \otimes q_1 \otimes  q_3 \otimes  q_4  = \frac{1}{\sqrt{2}} ( | 00 0 0 \rangle + | 1 1 1 1 \rangle )$$.
-\end{center}
 $$
+</p>
