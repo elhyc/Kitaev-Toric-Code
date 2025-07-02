@@ -9,8 +9,7 @@ Kitaev's toric code is a quantum error correction code, modelled on a $$k \times
 
 A novel feature of the toric code is that the stabilizer elements are defined with respect the spatial arrangement of qubits situated on a $$ k \times k$$ toric lattice. For example, the below image is a $$ 3 \times 3$$ toric lattice: 
 
-
-![image]{width=50 height=50}(lattice_base.png)
+<img src="lattice_base.png" alt="lattice" width="100"/>
 
 With respect to this lattice, the physical qubits are placed where the grey dots mark the edges. As the lattice represents a torus and has periodic boundary, the qubits on top and bottom rows are identified, as are the qubits on the left and right outer vertical columns. 
-Note that with this arrangement, we have a total of $$ 2 * 3^{2} = 18$ qubits.  
+Note that with this arrangement, we have a total of $$2 * 3^{2} = 18$$ qubits.  
