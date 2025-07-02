@@ -77,7 +77,7 @@ whose states will be determined and distinguished by the different configuration
 As the star and plaquette operators are involutions and commute, they are simutaneously diagonalizable with eigenvalues $+1$ and $-1$. The logical $0$ state $| 0 \rangle_L$ can be prepared by projecting the $2k^{2}$ qubit $0$ state $| 0 0 0 \cdots 0 \rangle$ onto the simutaneous $+1$-eigenspace for each star and plaquette operator associated to the $k \times k$ lattice.
 
 
-Following an idea from [this reference](https://pennylane.ai/qml/demos/tutorial_toric_code), we may prepare the appropriate logical zero (or  "ground state") by applying, for each star and plaquette, a circuit that prepares a "generalized GHZ state" among the qubits in the star or plaquette. 
+Following an idea from [pennylane.ai/qml/demos/tutorial_toric_code](https://pennylane.ai/qml/demos/tutorial_toric_code), we may prepare the appropriate logical zero (or  "ground state") by applying, for each star and plaquette, a circuit that prepares a "generalized GHZ state" among the qubits in the star or plaquette. 
 
 For example, if we label the qubits on the star depicted below in a counterclock wise fashion: $q_0$, $q_1$, $q_2$, $q_3$   
 
@@ -92,3 +92,5 @@ $$
 q_0 \otimes q_1 \otimes  q_3 \otimes  q_4  = \frac{1}{\sqrt{2}} \left( | 00 0 0 \rangle + | 1 1 1 1 \rangle \right)$$
 $$
 </p>
+
+It is clear that this state is fixed by the star operator (which recall is given by applying $X$-gates to the group of qubits given by the star). Furthermore, it is also invariant under applying the $Z$-gate to this state.  
