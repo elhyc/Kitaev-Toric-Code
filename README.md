@@ -42,7 +42,7 @@ Apart from qiskit, [the main code](KitaevToricCode.py) uses [NetworkX](https://n
 
 The main body of code is contained in the file [KitaevToricCode.py](KitaevToricCode.py). It contains a python/qiskit function that takes the following inputs: 
 
-1. A pair of booleans $`(x_{0}, x_{1}) \in \mathbb{F}^{n}_{2}`$
+1. A pair of booleans $(x_{0}, x_{1}) \in \mathbb{F}^{n}_2$
 2. An integer $k$ 
 3. An error probability, $p$
 
@@ -60,8 +60,9 @@ The idea here is that the $4$ logical basis states $\|00\rangle_L$, $\|01\rangle
 $\|11\rangle_L$ are not necessarily eigenvectors with respect to physical Pauli Z operators, but they are instead eigenvectors with respect to logical $Z$-operators with corresponding eigenvalue measurements:
 
 
+
  Logical State   | $(Z_0)_L$ | $(Z_1)_L$
- --------        | ------- |         ------- 
+ --------        | -------   |   ------- 
  $\|00 \rangle_L$  | $1$       | $1$               
  $\|01 \rangle_L$  | $1$       | $-1$              
  $\|10 \rangle_L$  | $-1$      | $1$              
