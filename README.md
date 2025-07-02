@@ -140,7 +140,7 @@ There are two cases:
 By the topology of the torus, there are exactly two homology classes of non-contractible loops. They can be represented by a loop that goes around the "hole" of the torus, and a loop that goes around the "tube"  of the torus. On the lattice representation of the torus, these correspond to paths that go straight across the lattice horizontally or vertically.
 
 <p align="center">
-<img src="toruswithlogicalop.png" alt="Depiction of logical operators" width="250"/>
+<img src="toruswithlogicalop.png" alt="Depiction of logical operators" width="300"/>
 </p>
 
 Thus, the logical operators $(X_0)_L$ and $(X_1)_L$ are defined by applying $X$-gates to every qubit along these two horizontal and vertical paths (respectively) across the lattice -- and the logical operators $(Z_0)_L$ and $(Z_1)_L$ are defined by applying $Z$-gates to every qubit along these two horizontal and vertical paths (respectively) across the lattice.
