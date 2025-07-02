@@ -79,11 +79,13 @@ As the star and plaquette operators are involutions and commute, they are simuta
 
 Following an idea from [this reference](https://pennylane.ai/qml/demos/tutorial_toric_code), we may prepare the appropriate logical zero (or  "ground state") by applying, for each star and plaquette, a circuit that prepares a "generalized GHZ state" among the qubits in the star or plaquette. 
 
-For example, if we label the qubits on the star depicted below in a counterclock wise fashion: $q_0 $, $ | q_1 $, $q_2$, $q_3$   
+For example, if we label the qubits on the star depicted below in a counterclock wise fashion: $q_0 $, $ q_1$, $q_2$, $q_3$   
 
 <p align="center">
 <img src="lattice_star_operator.png" alt="lattice" width="250"/>
 </p>
 
-then the GHZ state for this star is given by $q_0 \otimes q_1 \otimes   q_3 \otimes  q_4 \rangle = \frac{1}{\sqrt{2}} ( | 00 0 0 \rangle + | 1 1 1 1 \rangle )$.
+then the GHZ state for this star is given by 
+
+$$q_0 \otimes q_1 \otimes   q_3 \otimes  q_4 \rangle = \frac{1}{\sqrt{2}} ( | 00 0 0 \rangle + | 1 1 1 1 \rangle )$$.
 
