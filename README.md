@@ -97,4 +97,4 @@ It is clear that this state is fixed by the star operator (which recall is given
 
 To prepare the logical $0$ state $| 0 \rangle_L$, we start with the initial state $| 0 0 0 \cdots 0 \rangle$, and then prepare a superposition of these GHZ states for each star in the lattice.
 
-Once we have our logical $0$ state, we can produce logical states $|01 \rangle_L$ and $ |10 \rangle_L$ by defining logical operators $(X_0)_L$ and  $(X_1)_L$ , which give us "logical bit flip" operators. These will map $|00\rangle_L \mapto |01 \rangle_L$ and $|00\rangle_L \mapto |10 \rangle_L$ respectively.
+Once we have our logical $0$ state, we can produce logical states $|01 \rangle_L$ and $ |10 \rangle_L$ by defining logical operators $(X_0)_L$ and  $(X_1)_L$ , which give us "logical bit flip" operators. These will map $|00\rangle_L \mapsto |01 \rangle_L$ and $|00\rangle_L \mapsto |10 \rangle_L$ respectively.
