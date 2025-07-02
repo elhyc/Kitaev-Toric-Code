@@ -160,5 +160,5 @@ The result of measuring these ancilla qubits is that we deterministically get a 
 
 
 <p align="center">
-<img src="pathsXflip.png" alt="twopossiblepaths" width="250"/>
+<img src="pathsXflip.png" alt="twopossiblepaths" width="300"/>
 </p>
