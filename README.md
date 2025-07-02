@@ -51,10 +51,10 @@ and outputs a quantum circuit that does the following:
 1. Prepares the logical state $$| x_{0} x_{1} \rangle_{L}$$ with respect to the toric code of size $$k$$ (i.e. on $$2k^{2}$$ physical data qubits)
 2. Runs it through a random Pauli error channel with error rate $$p$$
 3. Applies appropriate syndrome measurement procedures, along with corresponding syndrome decoding procedures if necessary
-4. Measures the data qubits with respect to the appropriate logical $$Z$$-operators
+4. Measures the data qubits with respect to the appropriate logical Z-operators
 
-Note that in the end, we measure the data qubits with respect to the logical $$Z$$-operators, and not
-with respect to the standard computational basis (i.e. with respect to <em>physical</em> Pauli $$Z$$-operators). The idea here is that the $$4$$ logical basis states $$|00\rangle_{L},|01\rangle_{L}, |10\rangle_{L},|11\rangle_{L}$$ are not necessarily eigenvectors with respect to physical Pauli $$Z$$ operators, but they are instead eigenvectors with respect to $$(Z_{0})_{L}$$ and $$(Z_{1})_{L}$$ (logical $$Z$$-operators acting on respective logical qubits $$|x_{0} \rangle_{L}$$ and $$|x_{1} \rangle_{L}$$). In fact, we have that 
+Note that in the end, we measure the data qubits with respect to the logical Z-operators, and not
+with respect to the standard computational basis (i.e. with respect to <em>physical</em> Pauli Z-operators). The idea here is that the $$4$$ logical basis states $$|00\rangle_{L},|01\rangle_{L}, |10\rangle_{L},|11\rangle_{L}$$ are not necessarily eigenvectors with respect to physical Pauli Z operators, but they are instead eigenvectors with respect to $$(Z_{0})_{L}$$ and $$(Z_{1})_{L}$$ (logical Z-operators acting on respective logical qubits $$|x_{0} \rangle_{L}$$ and $$|x_{1} \rangle_{L}$$). In fact, we have that 
 
  Logical State   | $$(Z_{0})_{L}$$ | $$(Z_{1})_{L}$$
  --------        | ------- |         ------- 
