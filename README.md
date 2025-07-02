@@ -59,14 +59,14 @@ with respect to the standard computational basis (i.e. with respect to physical 
 The idea here is that the $4$ logical basis states $|00\rangle_{L},|01\rangle_{L}, |10\rangle_{L},|11\rangle_{L}$ are not necessarily eigenvectors with respect to physical Pauli Z operators, but they are instead eigenvectors with respect to logical $Z$-operators with corresponding eigenvalue measurements:
 
 
- Logical State   | $'(Z_{0})_{L}'$ | $'(Z_{1})_{L}'$
+ Logical State   | $(Z_{0})_{L}$ | $(Z_{1})_{L}$
  --------        | ------- |         ------- 
  $\|00 \rangle_{L}$  | $1$       | $1$               
  $\|01 \rangle_{L}$  | $1$       | $-1$              
  $\|10 \rangle_{L}$  | $-1$      | $1$              
  $\|11 \rangle_{L}$  | $-1$      | $-1$              
 
-Thus, assuming that the "recovery process" of the error correction procedure leaves us with a logical state in the the end, we may use $2$ ancilla qubits (corresponding to $'(Z_{0})_{L}'$ and $'(Z_{1})_{L}'$), 
+Thus, assuming that the "recovery process" of the error correction procedure leaves us with a logical state in the the end, we may use $2$ ancilla qubits (corresponding to $(\Z\_{0})\_{L}$ and $(\Z\_{1})\_{L}$), 
 whose states will be determined and distinguished by the different configurations of eigenvalues we may have (as described by the above table). By measuring these ancilla qubits, we may recover (with some probability) the appropriate logical state as prepared in the beginning, even after the data qubits have been passed through a random Pauli channel.
 
 
