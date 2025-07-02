@@ -171,5 +171,8 @@ For example, depicted in the figure above are two plaquettes whose ancilla qubit
 
 ## Reusing ancilla qubits in the implementation
 
-In order to keep the number of required ancilla qubits lower, we rely on the fact that we can address $X$-errors and $Z$-errors independently from each other, and that there are as many stars as there are plaquettes in a lattice. In other words, we can first use $k^{2}$ many ancilla qubits to find the locations of $-1$ eigenstate stars, measure them onto a classical register, address the syndromes, 
-reset them, and then repeat the process for plaquettes. 
+In order to keep the number of required ancilla qubits lower, we rely on the fact that we can address $X$-errors and $Z$-errors independently from each other, and that there are as many stars as there are plaquettes in a lattice. In other words, we can first use $k^{2}$ many ancilla qubits to find the locations of $-1$ eigenstate stars, measure them onto a classical register then reset the ancilla qubits, address the syndromes based on reading a classical register, and then repeat the process for plaquettes. In the end, the decoding procedure will *deterministically* resolve syndrome measurements for both $X$ and $Z$ errors.   
+
+## Logical errors
+
+Unfortunately, things become more complicated when there are many physical errors at once. Recall that forming a *non-contractible* loop of $X$ or $Z$ flips has the affect of performing a logical $X$ or $Z$ operation. Therefore, if we correct many $X$ or $Z$ errors by choosing connecting paths for each pair of $-1$ measured star or plaquette in such a way that the connecting paths union to a non-contractible loop, we will resolve the syndrome measurement (in that the syndromes will measure to $0$ for every star and plaquette) while changing the logical state of the data qubits. This is a logical error, and this means that we cannot recover the logical state initially prepared at the start of the encoding. 
