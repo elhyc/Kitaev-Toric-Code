@@ -124,8 +124,5 @@ By the nature of how the plaquettes are arranged on the lattice, it is easy to s
 
 This property is the essence of how one can detect "bit flips errors" on the logical $0$ state $|0 \rangle_{L}$. For example, if a *single* bit flip error occured after preparing the logical $0$ state, then it will be detected by the presence of exactly two $-1$-eigenvalue measurements associated to neighbouring plaquette operators. More generally, isolated bit flip errors can be detected if there are groups of neighbouring $-1$-eigenvalue measurements associated to pairs of neighbouring plaquette operators.
 
-If we have bit flips along a path like so:
 
-<p align="center">
-<img src="lattice_logical_x2.png" alt="bitflip_path" width="250"/>
-</p>
+It is easy to see that if we had a path of  bit flip errors/$X$-errors, traversing through adjacent plaquettes, then each plaquette on the path will have an even number of $-1$ eigenvector qubits around their respective boundaries, except for the starting plaquette of the path and the ending plaquette of the path. In other words, $-1$-eigenvalue measurements among plaquette operators can be "pushed out" along a path of bit flips, and the total number of plaquettes operators with $-1$-eigenvalue measurements will always be an even number.  
