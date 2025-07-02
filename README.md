@@ -42,7 +42,7 @@ Apart from qiskit, [the main code](KitaevToricCode.py) uses [NetworkX](https://n
 
 The main body of code is contained in the file [KitaevToricCode.py](KitaevToricCode.py). It contains a python/qiskit function that takes the following inputs: 
 
-1. A pair of booleans $(x_{0}, x_{1}) \in \mathbb{F}^{n}_{2}$
+1. A pair of booleans $`(x_{0}, x_{1}) \in \mathbb{F}^{n}_{2}`$
 2. An integer $k$ 
 3. An error probability, $p$
 
