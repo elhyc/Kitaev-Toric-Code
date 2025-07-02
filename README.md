@@ -1,6 +1,9 @@
 # Kitaev's toric code
 A qiskit implementation of Kitaev's toric code
 
+<p align="center">
+<img src="torus_code.png" alt="torus_code" width="250"/>
+</p>
 
 
 ## Introduction
