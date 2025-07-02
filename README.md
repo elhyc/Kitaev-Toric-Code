@@ -2,7 +2,7 @@
 A qiskit implementation of Kitaev's toric code
 
 <p align="center">
-<img src="torus_code.png" alt="torus_code" width="250"/>
+<img src="torus_code.png" alt="torus_code" width="400"/>
 </p>
 
 
