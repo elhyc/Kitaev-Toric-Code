@@ -162,3 +162,7 @@ The result of measuring these ancilla qubits is that we deterministically get a 
 <p align="center">
 <img src="pathsXflip.png" alt="twopossiblepaths" width="300"/>
 </p>
+
+For example, depicted in the figure above are two plaquettes whose ancilla qubits measure to $+1$, signalling that the data qubits are in a $-1$ eigenstate for the corresponding plaquette operators associated to those plaquettes. No other plaquettes in this illustration have ancilla qubits measuring to $+1$ (they all measure to $0$). 
+
+ Depicted in the figure are two alternative "explanations" for why those two plaquettes are the *only* plaquettes whose associated data qubits are in a $-1$ eigenstate. Both the pink path and yellow paths consist of qubits that have been $X$-flipped, so that the initial and terminal plaquettes of the paths are the ones whose associated data qubits are in a $-1$ eigenstate. As one might realize, there may be many possible paths of $X$-flips that can "explain" the syndrome measurement. In a perfect world, we would be able to pick out the correct path that actually caused the syndrome measurement, and reverse the $X$ flips that got us the syndrome measurements in the first place. 
