@@ -110,8 +110,8 @@ It is easy to see that, starting from the logical $0$ state $|0\rangle_{L}$, app
 
 <p align="center">
 $$
- ( \prod_{q \in P } Z_{q} ) X_{q'} | 0 \rangle_{L} =   - X_{q'} ( \prod_{q \in P } Z_{q} ) | 0 \rangle_{L} = X_{q'} | 0 \rangle_{L}
+ ( \prod_{q \in P } Z_{q} ) X_{q \ast } | 0 \rangle_{L} =   - X_{q \ast  } ( \prod_{q \in P } Z_{q} ) | 0 \rangle_{L} = -X_{q \ast } | 0 \rangle_{L}
 $$
 </p>
 
-Note that we use the fact that the logical $0$ state $|0\rangle_L$ is a $+1$-eigenvector for the plaquette operator $\prod_{q \in P } Z_{q}$ given by applying the $Z$-gate around plaquette. In the above, $q'$ denotes one of the qubits around the given plaquette $P$. 
+Note that we use the fact that the logical $0$ state $|0\rangle_L$ is a $+1$-eigenvector for the plaquette operator $\prod_{q \in P } Z_{q}$ given by applying the $Z$-gate around plaquette. In the above, $q\ast$ denotes one of the qubits around the given plaquette $P$, so that $X_{q \ast}$ denotes the $X$-gate targeting the qubit $q_{ \ast}$. 
