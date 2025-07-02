@@ -67,7 +67,7 @@ $\|11\rangle_L$ are not necessarily eigenvectors with respect to physical Pauli 
  $\|10 \rangle_L$  | $-1$      | $1$              
  $\|11 \rangle_L$  | $-1$      | $-1$              
 
-Thus, assuming that the "recovery process" of the error correction procedure leaves us with a logical state in the the end, we may use $2$ ancilla qubits corresponding to $(Z_0)_L$ and $(Z_1)_L$, 
+Thus, assuming that the "recovery process" of the error correction procedure leaves us with a logical state in the end, we may use $2$ ancilla qubits corresponding to $(Z_0)_L$ and $(Z_1)_L$, 
 whose states will be determined and distinguished by the different configurations of eigenvalues we may have (as described by the above table). By measuring these ancilla qubits, we may recover (with some probability) the appropriate logical state as prepared in the beginning, even after the data qubits have been passed through a random Pauli channel.
 
 
