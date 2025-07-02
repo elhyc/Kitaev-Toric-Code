@@ -151,14 +151,15 @@ In light of the above discussion, syndrome measurements and decoding procedures 
 
 In princple, we would like to have an ancilla qubit for each star and for each plaquette appearing in the lattice. These ancilla qubits are initialized to the physical zero state $| 0 \rangle$, and flip to $| 1 \rangle$ if and only if the data qubits associated to the corresponding plaquette or star are in a $-1$ eigenstate for the respective plaquette or star operator. 
 
-To do this, we can use a "Hadamard test" for each star or plaquette, which is a special case of the quantum phase estimation procedure. 
-
+To do this, we can use a "Hadamard test" for each star or plaquette, which is a special case of the quantum phase estimation procedure. The circuit diagram for the Hadamard test circuit is depicted below:
 
 <p align="center">
 <img src="Hadamard_test.png" alt="Hadamard test" width="250"/>
 </p>
 
-The result of measuring these ancilla qubits is that we deterministically get a $1$ if the $4$ surrounding data qubits are in a $-1$ eigenstate and we get a $0$ if the data qubits are in a $+1$ eigenstate. By performing these ancilla measurements for each star or plaquette, the syndrome qubits signal to us which star or plaquette contains an odd number of $X$ or $Z$ flipped data qubits. Note that this does not precisely pinpoint to us which qubits have been flipped, but instead it is a "hint" of what might be possible. 
+As with the quantum phase estimation algorithm, an eigenvector $| \Psi \rangle_{ n }$ of a unitary gate $U$ is prepared in the bottom register, and our ancilla qubit goes in the top register. In the case that $| \Psi \rangle_{n}$ is an eigenvector with eigenvalue $+1$ or $-1$ for $U$, running this circuit and measuring the ancilla qubit gives us the $+1$ if $| \Psi \rangle$ is an eigenvector with eigenvalue $-1$ and $0$ if it is an eigenvector with eigenvalue $1$.
+
+In the context of star and plaquette operators, measuring corresponding ancilla qubits will deterministically give us a $1$ if the $4$ surrounding data qubits are in a $-1$ eigenstate and give a $0$ if the data qubits are in a $+1$ eigenstate. By performing these ancilla measurements for each star or plaquette, the syndrome qubits signal to us which star or plaquette contains an odd number of $X$ or $Z$ flipped data qubits. Note that this does not precisely pinpoint to us which qubits have been flipped, but instead it is a "hint" of what might be possible. 
 
 
 <p align="center">
