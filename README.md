@@ -56,8 +56,8 @@ and outputs a quantum circuit that does the following:
 Note that in the end, we measure the data qubits with respect to the logical $Z$-operators, and not
 with respect to the standard computational basis (i.e. with respect to physical Pauli $Z$-operators). 
 
-The idea here is that the $4$ logical basis states $\|00\rangle_L$, $\|01\rangle_L$, $\|10\rangle_L$ and
-$\|11\rangle_L$ are not necessarily eigenvectors with respect to physical Pauli Z operators, but they are instead eigenvectors with respect to logical $Z$-operators with corresponding eigenvalue measurements:
+The idea here is that the $4$ logical basis states $|00\rangle_L$, $|01\rangle_L$, $|10\rangle_L$ and
+$|11\rangle_L$ are not necessarily eigenvectors with respect to physical Pauli Z operators, but they are instead eigenvectors with respect to logical $Z$-operators with corresponding eigenvalue measurements:
 
 
 
@@ -74,5 +74,5 @@ whose states will be determined and distinguished by the different configuration
 
 ## Encoding logical states in the toric code
 
-As the star and plaquette operators are involutions and commute, they are simutaneously diagonalizable with eigenvalues $+1$ and $-1$. The logical $0$ state $\| 0 \rangle_L$ can be prepared by projecting the $2k^{2}$ qubit $0$ state $\| 0 0 0 \cdots 0 \rangle$ onto the simutaneous $+1$-eigenspace for each star and plaquette operator associated to the $k \times k$ lattice.
+As the star and plaquette operators are involutions and commute, they are simutaneously diagonalizable with eigenvalues $+1$ and $-1$. The logical $0$ state $| 0 \rangle_L$ can be prepared by projecting the $2k^{2}$ qubit $0$ state $| 0 0 0 \cdots 0 \rangle$ onto the simutaneous $+1$-eigenspace for each star and plaquette operator associated to the $k \times k$ lattice.
 
