@@ -104,3 +104,14 @@ Once we have our logical $0$ state, we can produce logical states $|01 \rangle_L
 <p align="center">
 <img src="torus_code.png" alt="torus_code" width="400"/>
 </p>
+
+
+It is easy to see that, starting from the logical $0$ state $|0\rangle_{L}$, applying a (physical) $X$-gate (i.e. a bit-flip) to a qubit on a plaquette produces a state that is a $-1$ eigenvalue for the corresponding plaquette operator. Indeed, this is true because $X$ and $Z$ gates anti-commute. So, as a plaquette operator is defined by applying $Z$-gates around a plaquette $P$, we get:
+
+<p align="center">
+$$
+ ( \Prod_{q \in P } Z_{q} ) X_{q'} | 0 \rangle_{L} =   - X_{q'} ( \Prod_{q \in P } Z_{q} ) | 0 \rangle_{L} = X_{q'} | 0 \rangle_{L}
+$$
+</p>
+
+Note that we use the fact that the logical $0$ state $|0\rangle_L$ is a $+1$-eigenvector for the plaquette operator $\Prod_{q \in P } Z_{q}$ given by applying the $Z$-gate around plaquette. In the above, $q'$ denotes one of the qubits around the given plaquette $P$. 
