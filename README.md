@@ -56,10 +56,10 @@ and outputs a quantum circuit that does the following:
 Note that in the end, we measure the data qubits with respect to the logical $Z$-operators, and not
 with respect to the standard computational basis (i.e. with respect to physical Pauli $Z$-operators). 
 
-The idea here is that the $4$ logical basis states $|00\rangle_L,|01\rangle_L, |10\rangle_L,|11\rangle_L$ are not necessarily eigenvectors with respect to physical Pauli Z operators, but they are instead eigenvectors with respect to logical $Z$-operators with corresponding eigenvalue measurements:
+The idea here is that the $4$ logical basis states $|00\rangle_L$, $|01\rangle_L$, $|10\rangle_L$,$|11\rangle_L$ are not necessarily eigenvectors with respect to physical Pauli Z operators, but they are instead eigenvectors with respect to logical $Z$-operators with corresponding eigenvalue measurements:
 
 
- Logical State   | $(Z_0)_L}$ | $(Z_1)_L$
+ Logical State   | $(Z_0)_L$ | $(Z_1)_L$
  --------        | ------- |         ------- 
  $\|00 \rangle_L$  | $1$       | $1$               
  $\|01 \rangle_L$  | $1$       | $-1$              
