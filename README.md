@@ -115,3 +115,6 @@ $$
 </p>
 
 Note that we use the fact that the logical $0$ state $|0\rangle_L$ is a $+1$-eigenvector for the plaquette operator $\prod_{q \in P } Z_{q}$ given by applying the $Z$-gate around plaquette. In the above, $q^{\ast}$ denotes one of the qubits around the given plaquette $P$, so that $X_{q^{\ast}}$ denotes the $X$-gate targeting the qubit $q^{\ast}$. 
+
+
+By the nature of how the plaquettes are arranged on the lattice, it is easy to see that any qubit $q^{\ast} \in P$ belongs to exactly two plaquettes $P$, $P'$. Thus, the state $X_{q^{\ast}} | 0 \rangle_L$ will be an $-1$-eigenvector for exactly $2$ plaquette operators, and will be a $+1$-eigenvector for all the other plaquette operators.   
