@@ -1,9 +1,6 @@
 # Kitaev's toric code
 A qiskit implementation of Kitaev's toric code
 
-<p align="center">
-<img src="torus_code.png" alt="torus_code" width="400"/>
-</p>
 
 
 ## Introduction
@@ -103,3 +100,7 @@ To prepare the logical $0$ state $| 0 \rangle_L$, we start with the initial stat
 Once we have our logical $0$ state, we can produce logical states $|01 \rangle_L$ and $|10 \rangle_L$ by defining logical operators $(X_0)_L$ and  $(X_1)_L$ , which give us "logical bit flip" operators. These will map $|00\rangle_L \mapsto |01 \rangle_L$ and $|00\rangle_L \mapsto |10 \rangle_L$ respectively.
 
 ## Logical states and the topology of the torus
+
+<p align="center">
+<img src="torus_code.png" alt="torus_code" width="400"/>
+</p>
