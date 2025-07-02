@@ -66,6 +66,9 @@ The idea here is that the $4$ logical basis states $|00\rangle_{L},|01\rangle_{L
  $\|10 \rangle_{L}$  | $-1$      | $1$              
  $\|11 \rangle_{L}$  | $-1$      | $-1$              
 
+Thus, assuming that the "recovery process" of the error correction procedure leaves us with a logical state in the the end, we may use $2$ ancilla qubits (corresponding to $(Z_{0})_{L}$ and $(Z_{1})_{L}$), 
+whose states will be determined and distinguished by the different configurations of eigenvalues we may have (as described by the above table). By measuring these ancilla qubits, we may recover (with some probability) the appropriate logical state as prepared in the beginning, even after the data qubits have been passed through a random Pauli channel.
+
 
 ## Encoding logical states in the toric code
 
