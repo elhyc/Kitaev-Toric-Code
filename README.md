@@ -56,17 +56,17 @@ and outputs a quantum circuit that does the following:
 Note that in the end, we measure the data qubits with respect to the logical $Z$-operators, and not
 with respect to the standard computational basis (i.e. with respect to physical Pauli $Z$-operators). 
 
-The idea here is that the $4$ logical basis states $|00\rangle_{L},|01\rangle_{L}, |10\rangle_{L},|11\rangle_{L}$ are not necessarily eigenvectors with respect to physical Pauli Z operators, but they are instead eigenvectors with respect to logical $Z$-operators with corresponding eigenvalue measurements:
+The idea here is that the $4$ logical basis states $|00\rangle_L,|01\rangle_L, |10\rangle_L,|11\rangle_L$ are not necessarily eigenvectors with respect to physical Pauli Z operators, but they are instead eigenvectors with respect to logical $Z$-operators with corresponding eigenvalue measurements:
 
 
- Logical State   | $(Z_{0})_{L}$ | $(Z_{1})_{L}$
+ Logical State   | $(Z_0)_L}$ | $(Z_1)_L$
  --------        | ------- |         ------- 
- $\|00 \rangle_{L}$  | $1$       | $1$               
- $\|01 \rangle_{L}$  | $1$       | $-1$              
- $\|10 \rangle_{L}$  | $-1$      | $1$              
- $\|11 \rangle_{L}$  | $-1$      | $-1$              
+ $\|00 \rangle_L$  | $1$       | $1$               
+ $\|01 \rangle_L$  | $1$       | $-1$              
+ $\|10 \rangle_L$  | $-1$      | $1$              
+ $\|11 \rangle_L$  | $-1$      | $-1$              
 
-Thus, assuming that the "recovery process" of the error correction procedure leaves us with a logical state in the the end, we may use $2$ ancilla qubits (corresponding to $(Z_0)_L$ and $(Z_1)_L$), 
+Thus, assuming that the "recovery process" of the error correction procedure leaves us with a logical state in the the end, we may use $2$ ancilla qubits corresponding to $(Z_0)_L$ and $(Z_1)_L$, 
 whose states will be determined and distinguished by the different configurations of eigenvalues we may have (as described by the above table). By measuring these ancilla qubits, we may recover (with some probability) the appropriate logical state as prepared in the beginning, even after the data qubits have been passed through a random Pauli channel.
 
 
