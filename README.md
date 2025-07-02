@@ -89,6 +89,6 @@ then the GHZ state for this star is given by
 
 <p align="center">
 $$
-q_0 \otimes q_1 \otimes  q_3 \otimes  q_4  = \frac{1}{\sqrt{2}} \left( | 00 0 0 \rangle + | 1 1 1 1 \rangle \rights)$$
+q_0 \otimes q_1 \otimes  q_3 \otimes  q_4  = \frac{1}{\sqrt{2}} \left( | 00 0 0 \rangle + | 1 1 1 1 \rangle \right)$$
 $$
 </p>
