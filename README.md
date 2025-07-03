@@ -196,5 +196,5 @@ It is easy to see that the shortest path on the lattice which forms a non-contra
 Running some preliminary simulations with this implementation estimates that the threshold, under our error model, seems to be somewhere near $6 \%$ to $12 \%$ 
 
 <p align="center">
-<img src="./Figures/LogicalvsPhysicalErrorRates.png" alt="Logical v.s. physical error rates" width="300"/>
+<img src="./Figures/LogicalvsPhysicalErrorRates.png" alt="Logical v.s. physical error rates" width="400"/>
 </p>
