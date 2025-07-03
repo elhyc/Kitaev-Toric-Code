@@ -153,19 +153,7 @@ class Lattice:
             for j in range(self.cols):
                 self.stars[i][j].qubits = [ LatticeCircuit.qubits[idx] for idx in self.get_star_indices(i,j)]
                 
-                
-    # def get_stars(self, LatticeCircuit):
-    #     L = [ ]
-    #     for i in range(self.rows):
-    #         row = []
-    #         for j in range(self.cols):
-    #             S = Star(i,j)
-    #             S.qubits = [ LatticeCircuit.qubits[idx] for idx in self.get_star_indices(i,j)]
-    #             row.append(S)
-    #         L.append(row)
-    #     return L
-    
-
+            
     def marked_plaquettes_graph(self, marked_plaquettes):
         # returns a weighted graph of marked plaquettes, edges are weighted by the distance between marked plaquettes
         plaquette_graph = nx.complete_graph(len(marked_plaquettes))
@@ -194,7 +182,6 @@ class Lattice:
     def plaquette_path(self, LatticeCircuit, P1,P2):
         
         # returns a list of qubits along a path connecting two plaquettes
-        # plaquettes = self.get_plaquettes(LatticeCircuit)
         
         path = []
         source = P1 
@@ -212,13 +199,7 @@ class Lattice:
                 source = row_back
             
             
-            # if abs( (source.row_idx - 1)%3 -  P2.row_idx ) <=  abs( (source.row_idx + 1)%3 -  P2.row_idx ):
-            #     path.append( source.qubits[0] )
-            #     source = self.plaquettes[(source.row_idx  - 1) % 3][(source.col_idx ) % 3]        
-            # else:
-            #     path.append( source.qubits[2] )
-            #     source = self.plaquettes[( source.row_idx + 1  ) % 3][(source.col_idx ) % 3]     
-                
+
                      
         while source.col_idx != P2.col_idx:
             col_fwd =  self.stars[(source.row_idx    ) % self.rows ][(source.col_idx + 1) % self.cols ]  
@@ -230,23 +211,12 @@ class Lattice:
                 path.append( source.qubits[1] )
                 source = col_back            
                             
-            
-            
-            # if abs( (source.col_idx - 1)%3 -  P2.col_idx ) <=  abs( (source.col_idx + 1)%3 -  P2.col_idx ):
-            #     path.append( source.qubits[1] )
-            #     source = self.plaquettes[( source.row_idx   ) % 3][(source.col_idx - 1) % 3]        
-      
-            # else:
-            #     path.append( source.qubits[3] )
-            #     source = self.plaquettes[(source.row_idx    ) % 3][(source.col_idx + 1) % 3]  
-
 
         return path
         
     def star_path(self, LatticeCircuit, S1,S2):
         
         # returns a list of qubits along a path connecting two stars
-        # stars = self.get_stars(LatticeCircuit)
         
         path = []
         source = S1 
@@ -261,14 +231,6 @@ class Lattice:
                 path.append( source.qubits[1] )
                 source = col_back            
                 
-            # if abs( (source.col_idx - 1)%3 -  S2.col_idx ) <=  abs( (source.col_idx + 1)%3 -  S2.col_idx ):
-                
-            #     path.append( source.qubits[1] )
-            #     source = self.stars[( source.row_idx   ) % 3][(source.col_idx - 1) % 3]        
-      
-            # else:
-            #     path.append( source.qubits[3] )
-            #     source = self.stars[(source.row_idx    ) % 3][(source.col_idx + 1) % 3]  
 
                 
         while source.row_idx != S2.row_idx:
@@ -281,15 +243,7 @@ class Lattice:
             else:
                 path.append( source.qubits[0] )
                 source = row_back
-                  
-            # if abs( (source.row_idx - 1)%3 -  S2.row_idx ) <=  abs( (source.row_idx + 1)%3 -  S2.row_idx ):
-            #     path.append( source.qubits[0] )
-            #     source = self.stars[(source.row_idx  - 1) % 3][(source.col_idx ) % 3]        
-            # else:
-                
-            #     source = self.stars[( source.row_idx + 1  ) % 3][(source.col_idx ) % 3]            
-            
-        
+                        
 
         return path           
 
