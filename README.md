@@ -61,7 +61,7 @@ The idea here is that the $4$ logical basis states $|00\rangle_L$, $|01\rangle_L
 $|11\rangle_L$ are not necessarily eigenvectors with respect to physical Pauli Z operators, but they are instead eigenvectors with respect to logical $Z$-operators with corresponding eigenvalue measurements:
 
 
-
+                 | Eigenvalue           |
  Logical State   | $(Z_0)_L$ | $(Z_1)_L$
  --------        | -------   |   ------- 
  $\|00 \rangle_L$  | $1$       | $1$               
