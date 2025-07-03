@@ -198,3 +198,17 @@ Running some preliminary simulations with this implementation estimates that the
 <p align="center">
 <img src="./Figures/LogicalvsPhysicalErrorRates.png" alt="Logical v.s. physical error rates" width="500"/>
 </p>
+
+## Decoding with minimal weight perfect matchings
+
+On one hand, while we can "resolve syndrome measurements" (i.e. affect the state of our data qubits so that syndrome measurements no longer measure $-1$-eigenvalues) by arbitrarily pairing up $-1$-eigenvalue stars and plaquettes, it would be especially prudent to choose these pairings more wisely. In light of the risk of inducing logical errors upon addressing syndrome measurements, it is of course beneficial to choose these pairings in a way that attempts to minimizes the probability of this occuring. 
+
+To this end, there is a reasonable choice of pairing algorithm, given by minimum weight perfect matchings.
+The idea here is to choose all of our pairings so that the total distance travelled between all paths connecting pairs of $-1$ eigenvalue stars or plaquettes is minimized. 
+
+<p align="center">
+<img src="./Figures/MWPM.png" alt="MWPM illustration" width="300"/>
+</p>
+
+
+For a sufficiently small number of errors, minimizing the total distance between all paths connecting pairs of $-1$ eigenvalue stars or plaquettes will make it less likely for the syndrome recovery procedure to inadvertently cause a logical error.  
