@@ -193,8 +193,8 @@ Unfortunately, things become more complicated when there are many physical error
 It is easy to see that the shortest path on the lattice which forms a non-contractible loop is of length $k$ (going across vertically or horizontally). Thus, the code distance for the toric code on a $k \times k$ lattice is $k$. In other words, for syndrome corrections to accumulate to a logical error, we need $X$ and $Z$ flips in the syndrome recovery procedure have to reach across the entire lattice. As a result, for sufficiently low error rates, it should be the case that increasing the lattice grid size gives us a lower expected rate of logical errors in our decoding. On the other hand, if the error rate is too high, then larger sizes of lattices will mean that there will be more qubits that may be flipped which will make it more likely that we make corrections that accumulate to a logical error. The bifurcation point of physical error rate leading to more logical errors as the code distance increases is the *code threshold* -- highly dependent on the error model and decoding algorithm used, and other implementation details. 
 
 
-Running some preliminary simulations with this implementation estimates that the threshold, under our error model, seems to be somewhere near $6%$ to $12%$ 
+Running some preliminary simulations with this implementation estimates that the threshold, under our error model, seems to be somewhere near $6\%$ to $12\%$ 
 
 <p align="center">
-<img src="./Figures/LogicalvsPhysicalErrorRates.png" alt="Logical v.s. physical error rates" width="400"/>
+<img src="./Figures/LogicalvsPhysicalErrorRates.png" alt="Logical v.s. physical error rates" width="500"/>
 </p>
