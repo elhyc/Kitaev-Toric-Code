@@ -167,7 +167,7 @@ To do this, we can use a "Hadamard test" for each star or plaquette, which is a 
 <img src="./Figures/Hadamard_test.png" alt="Hadamard test" width="250"/>
 </p>
 
-As with the quantum phase estimation algorithm, an eigenvector $| \Psi \rangle_{ n }$ of a unitary gate $U$ is prepared in the bottom register, and our ancilla qubit goes in the top register. In the case that $| \Psi \rangle_{n}$ is an eigenvector with eigenvalue $+1$ or $-1$ for $U$, running this circuit and measuring the ancilla qubit gives us the $+1$ if $| \Psi \rangle$ is an eigenvector with eigenvalue $-1$ and $0$ if it is an eigenvector with eigenvalue $1$.
+As with the quantum phase estimation algorithm, an eigenvector $| \psi \rangle_{ n }$ of a unitary gate $U$ is prepared in the bottom register, and our ancilla qubit goes in the top register. In the case that $| \psi \rangle_{n}$ is an eigenvector with eigenvalue $+1$ or $-1$ for $U$, running this circuit and measuring the ancilla qubit gives us the $+1$ if $| \psi \rangle$ is an eigenvector with eigenvalue $-1$ and $0$ if it is an eigenvector with eigenvalue $1$.
 
 In the context of star and plaquette operators, measuring corresponding ancilla qubits will deterministically give us a $1$ if the $4$ surrounding data qubits are in a $-1$ eigenstate and give a $0$ if the data qubits are in a $+1$ eigenstate. By performing these ancilla measurements for each star or plaquette, the syndrome qubits signal to us which star or plaquette contains an odd number of $X$ or $Z$ flipped data qubits. Note that this does not precisely pinpoint to us which qubits have been flipped, but instead it is a "hint" of what might be possible. 
 
