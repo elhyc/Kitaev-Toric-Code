@@ -8,8 +8,6 @@ from qiskit.primitives import SamplerResult
 from qiskit.providers.basic_provider import BasicProvider
 from qiskit import transpile
 import numpy as np
-from collections import Counter
-from qiskit.visualization import plot_histogram, array_to_latex
 from latticecode import *
 
 
@@ -49,26 +47,7 @@ def LogicalX0_circuit(ToricLattice):
         LogicalX0Prep.x( 2*c*ToricLattice.rows )
     return LogicalX0Prep
 
-# def X_on_path(L):
-#     circuit = QuantumCircuit(ToricLattice.num_of_qubits)
-#     for idx in L:
-#         circuit.x(idx)    
-#     return circuit
 
-
-# def X_star(s_x,s_y):
-#     circuit = QuantumCircuit(ToricLattice.num_of_qubits)
-#     L = ToricLattice.get_star_indices(s_x,s_y)
-#     for idx in L:
-#         circuit.x(idx)
-#     return circuit
-
-# def Z_plaq(p_x,p_y):
-#     circuit = QuantumCircuit(ToricLattice.num_of_qubits)
-#     L = ToricLattice.get_plaquette_indices(p_x,p_y)
-#     for idx in L:
-#         circuit.z(idx)
-#     return circuit 
 
 
 def syndrome_measurement(ToricLattice, LatticeCircuit, shape):
@@ -112,7 +91,6 @@ def syndrome_measurement(ToricLattice, LatticeCircuit, shape):
     
 
 def ApplyPauliError(quantum_circuit, qubits, p_error):
-    # p_error must be <= 1/3
     
     
     for qubit in qubits:
@@ -123,17 +101,7 @@ def ApplyPauliError(quantum_circuit, qubits, p_error):
             quantum_circuit.z(qubit)
         if error_choice == 3:
             quantum_circuit.y(qubit)
-            
-        # XChoice = random.choice([0,1],p=[ p_error, 1 - p_error])
-        # ZChoice = random.choice([0,1],p=[ p_error, 1 - p_error])
-        # if (XChoice == 0 and total_X < X_max) or (XChoice == 0 and X_max == -1):
-        #     quantum_circuit.x(qubit)
-        #     total_X += 1
-        
-        # if (ZChoice == 0 and total_Z < Z_max) or (ZChoice == 0 and Z_max == -1):
-        #     quantum_circuit.z(qubit)
-        #     total_Z += 1
-
+    
     
          
 def KitaevToricModel( x_0, x_1, k0, k1 , p_error, error=True):
