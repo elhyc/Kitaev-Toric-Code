@@ -191,3 +191,10 @@ In order to keep the number of required ancilla qubits lower, we rely on the fac
 Unfortunately, things become more complicated when there are many physical errors at once. Recall that forming a *non-contractible* loop of $X$ or $Z$ flips has the affect of performing a logical $X$ or $Z$ operation. Therefore, if we correct many $X$ or $Z$ errors by choosing connecting paths for each pair of $-1$ measured stars or plaquettes in such a way that the connecting paths union to a non-contractible loop, we will resolve the syndrome measurement (in that the syndromes will measure to $0$ for every star and plaquette) while changing the logical state of the data qubits. This is a logical error, and this means that we cannot recover the logical state initially prepared at the start of the encoding. 
 
 It is easy to see that the shortest path on the lattice which forms a non-contractible loop is of length $k$ (going across vertically or horizontally). Thus, the code distance for the toric code on a $k \times k$ lattice is $k$. In other words, for syndrome corrections to accumulate to a logical error, we need $X$ and $Z$ flips in the syndrome recovery procedure have to reach across the entire lattice. As a result, for sufficiently low error rates, it should be the case that increasing the lattice grid size gives us a lower expected rate of logical errors in our decoding. On the other hand, if the error rate is too high, then larger sizes of lattices will mean that there will be more qubits that may be flipped which will make it more likely that we make corrections that accumulate to a logical error. The bifurcation point of physical error rate leading to more logical errors as the code distance increases is the *code threshold* -- highly dependent on the error model and decoding algorithm used, and other implementation details. 
+
+
+Running some preliminary simulations with this implementation shows that the threshold, under our error model, seems to be somewhere near $6 \%$ to $12 \%$. 
+
+<p align="center">
+<img src="./Figures/LogicalvsPhysicalErrorRates.png" alt="Logical v.s. physical error rates" width="300"/>
+</p>
