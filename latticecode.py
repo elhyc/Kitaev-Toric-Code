@@ -266,7 +266,7 @@ class Plaquette:
             vert = vert + height 
             
         if hor > width/2:
-            hor  = hor - height
+            hor  = hor - width
         if hor < -width/2:
             hor = hor + width              
         
@@ -292,7 +292,7 @@ class Star:
             vert = vert + height 
             
         if hor > width/2:
-            hor  = hor - height
+            hor  = hor - width
         if hor < -width/2:
             hor = hor + width              
         
