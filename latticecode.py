@@ -188,10 +188,10 @@ class Lattice:
         
         
         while source.row_idx != P2.row_idx:
-            row_fwd = source = self.stars[( source.row_idx + 1  ) % self.rows ][(source.col_idx ) % self.cols ]    
-            row_back = self.stars[(source.row_idx  - 1) % self.rows][(source.col_idx ) % self.cols ]  
+            row_fwd = self.plaquettes[( source.row_idx + 1  ) % self.rows ][(source.col_idx ) % self.cols ]    
+            row_back = self.plaquettes[(source.row_idx  - 1) % self.rows][(source.col_idx ) % self.cols ]  
             
-            if P2.dist( row_fwd, self.rows, self.cols  ) <= P2.dist( source, self.rows, self.cols  ):
+            if P2.dist( row_fwd, self.rows, self.cols  ) < P2.dist( row_back, self.rows, self.cols  ):
                 path.append( source.qubits[2] )
                 source = row_fwd
             else:
@@ -202,9 +202,9 @@ class Lattice:
 
                      
         while source.col_idx != P2.col_idx:
-            col_fwd =  self.stars[(source.row_idx    ) % self.rows ][(source.col_idx + 1) % self.cols ]  
-            col_back = self.stars[( source.row_idx   ) % self.rows ][(source.col_idx - 1) % self.cols ]     
-            if P2.dist( col_fwd, self.rows, self.cols ) <= P2.dist(source, self.rows, self.cols ):
+            col_fwd =  self.plaquettes[(source.row_idx    ) % self.rows ][(source.col_idx + 1) % self.cols ]  
+            col_back = self.plaquettes[( source.row_idx   ) % self.rows ][(source.col_idx - 1) % self.cols ]     
+            if P2.dist( col_fwd, self.rows, self.cols ) < P2.dist(col_back, self.rows, self.cols ):
                 path.append( source.qubits[3] )
                 source = col_fwd
             else:
@@ -224,7 +224,7 @@ class Lattice:
         while source.col_idx != S2.col_idx:
             col_fwd =  self.stars[(source.row_idx    ) % self.rows  ][(source.col_idx + 1) % self.cols ]  
             col_back = self.stars[( source.row_idx   ) % self.rows ][(source.col_idx - 1) % self.cols ]     
-            if S2.dist( col_fwd, self.rows, self.cols ) <= S2.dist( source, self.rows, self.cols ):
+            if S2.dist( col_fwd, self.rows, self.cols ) < S2.dist( col_back, self.rows, self.cols ):
                 path.append( source.qubits[3] )
                 source = col_fwd
             else:
@@ -234,10 +234,10 @@ class Lattice:
 
                 
         while source.row_idx != S2.row_idx:
-            row_fwd = source = self.stars[( source.row_idx + 1  ) % self.rows  ][(source.col_idx ) % self.cols  ]    
+            row_fwd =  self.stars[( source.row_idx + 1  ) % self.rows  ][(source.col_idx ) % self.cols  ]    
             row_back = self.stars[(source.row_idx  - 1) %  self.rows ][(source.col_idx ) % self.cols ]  
             
-            if S2.dist( row_fwd, self.rows, self.cols ) <= S2.dist( source, self.rows, self.cols ):
+            if S2.dist( row_fwd, self.rows, self.cols ) < S2.dist(  row_back, self.rows, self.cols ):
                 path.append( source.qubits[2] )
                 source = row_fwd
             else:

@@ -101,6 +101,7 @@ def ApplyPauliError(quantum_circuit, qubits, p_error):
             quantum_circuit.z(qubit)
         if error_choice == 3:
             quantum_circuit.y(qubit)
+          
     
     
          
